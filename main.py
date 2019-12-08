@@ -4,13 +4,14 @@ from scrap import ScrapComp
 import schedule
 import time
 
-fb = firebase.FirebaseApplication('https://fireitup-1c90a.firebaseio.com/',None)
-
 
 # ===================================================================================
 DataBase_R = os.getenv("DataBase_R")
 DataBase_B = os.getenv("DataBase_B")
 # ===================================================================================
+
+
+fb = firebase.FirebaseApplication(DataBase_R, None)
 
 
 def task():
