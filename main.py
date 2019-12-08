@@ -11,7 +11,7 @@ DataBase_B = os.getenv("DataBase_B")
 # ===================================================================================
 
 
-fb = firebase.FirebaseApplication(DataBase_R, None)
+fb = firebase.FirebaseApplication(DataBase_B, None)
 
 
 def task():
@@ -19,7 +19,7 @@ def task():
     realtime_data = ScrapComp().get_data()
     # print(realtime_data)
     # fb.delete('/mytestdata/','1')
-    res = fb.patch('/rl', realtime_data)
+    res = fb.patch('/', realtime_data)
     print("database updated", res)
 
 
